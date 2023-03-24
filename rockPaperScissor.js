@@ -3,6 +3,7 @@ var score = {
     computerScore: 0
 };
 
+
 function getUserChoice() {
     let userInput = prompt(`Please enter your choice. Your choices are:
 1. Rock  2.Paper  3.Scissor`);
@@ -16,9 +17,6 @@ function getComputerChoice() {
     let choice = arr[randomIndex].toLowerCase();
     return choice;
 }
-
-const computerChoice = getComputerChoice();
-const userChoice = getComputerChoice();
 
 function playRound(userChoice, computerChoice) {
     console.log(userChoice + " " + computerChoice);
@@ -52,3 +50,23 @@ function playRound(userChoice, computerChoice) {
         return "It is a tie.";
     }
 }
+
+
+function game() {
+    while (score.playerScore < 5 && score.computerScore < 5) {
+        let userChoice = getUserChoice();
+        let computerChoice = getComputerChoice();
+        console.log(playRound(userChoice,computerChoice));
+    }
+    if (score.playerScore === 5) {
+        return "You won the Game!"
+    }
+    else if (score.computerScore === 5) {
+        return "Computer won the Game!"
+    }
+    else if (score.playerScore === 5 && score.computerScore === 5) {
+        return "This game is a Draw."
+    }
+}
+
+console.log(game());
