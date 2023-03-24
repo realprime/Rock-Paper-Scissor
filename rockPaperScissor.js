@@ -3,9 +3,12 @@ var score = {
     computerScore: 0
 };
 
-let userInput = prompt(`Please enter your choice. Your choices are:
+function getUserChoice() {
+    let userInput = prompt(`Please enter your choice. Your choices are:
 1. Rock  2.Paper  3.Scissor`);
-let userChoice = userInput.toLowerCase();
+    let choice = userInput.toLowerCase();
+    return choice;
+}
 
 function getComputerChoice() {
     arr = ['rock', 'paper', 'scissor']
@@ -15,6 +18,7 @@ function getComputerChoice() {
 }
 
 const computerChoice = getComputerChoice();
+const userChoice = getComputerChoice();
 
 function playRound(userChoice, computerChoice) {
     console.log(userChoice + " " + computerChoice);
