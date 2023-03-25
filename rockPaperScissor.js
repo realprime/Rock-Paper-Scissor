@@ -73,13 +73,13 @@ function game() {
         let computerChoice = getComputerChoice();
         console.log(playRound(userChoice,computerChoice));
     }
-    if (score.userScore === 5) {
+    if (score.userScore === 5 && score.computerScore < 5) {
         let userWonMessage = `You won the Game!
 User Score: ${score.userScore}
 Computer Score: ${score.computerScore}`;
         return userWonMessage;
     }
-    else if (score.computerScore === 5) {
+    else if (score.computerScore === 5 && score.userScore < 5) {
         let computerWonMessage = `Computer won the Game!
 User Score: ${score.userScore}
 Computer Score: ${score.computerScore}`;
