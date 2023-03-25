@@ -8,7 +8,13 @@ function getUserChoice() {
     let userInput = prompt(`Please enter your choice. Your choices are:
 1. Rock  2.Paper  3.Scissor`);
     let choice = userInput.toLowerCase();
-    return choice;
+    if(choice === 'rock' || choice === 'paper' || choice === 'scissor'){
+        return choice;
+    }
+    else{
+        console.log("Given input is out of given choices. Please try again.")
+        getUserChoice();
+    }
 }
 
 function getComputerChoice() {
