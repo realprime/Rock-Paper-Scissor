@@ -3,7 +3,6 @@ var score = {
     computerScore: 0
 };
 
-
 function getUserChoice() {
     let userInput = prompt(`Please enter your choice. Your choices are:
 1. Rock  2.Paper  3.Scissor`);
@@ -57,7 +56,6 @@ function playRound(userChoice, computerChoice) {
     }
 }
 
-
 function game() {
     while (score.userScore < 5 && score.computerScore < 5) {
         let userChoice = getUserChoice();
@@ -65,10 +63,16 @@ function game() {
         console.log(playRound(userChoice,computerChoice));
     }
     if (score.userScore === 5) {
-        return "You won the Game!"
+        let userWonMessage = `You won the Game!
+User Score: ${score.userScore}
+Computer Score: ${score.computerScore}`;
+        return userWonMessage;
     }
     else if (score.computerScore === 5) {
-        return "Computer won the Game!"
+        let computerWonMessage = `Computer won the Game!
+User Score: ${score.userScore}
+Computer Score: ${score.computerScore}`;
+        return computerWonMessage;
     }
     else if (score.userScore === 5 && score.computerScore === 5) {
         return "This game is a Draw."
