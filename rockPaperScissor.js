@@ -1,5 +1,5 @@
 var score = {
-    playerScore: 0,
+    userScore: 0,
     computerScore: 0
 };
 
@@ -31,11 +31,11 @@ function playRound(userChoice, computerChoice) {
         return "You Lose! Paper beats Rock.";
     }
     else if (userChoice === 'rock' && computerChoice === 'scissor') {
-        score.playerScore += 1;
+        score.userScore += 1;
         return "You Win! Rock beats Scissor.";
     }
     else if (userChoice === 'paper' && computerChoice === 'rock') {
-        score.playerScore += 1;
+        score.userScore += 1;
         return "You Win! Paper beats Rock.";
     }
     else if (userChoice === 'paper' && computerChoice === 'scissor') {
@@ -47,30 +47,30 @@ function playRound(userChoice, computerChoice) {
         return "You Lose! Rock beats Scissor.";
     }
     else if (userChoice === 'scissor' && computerChoice === 'paper') {
-        score.playerScore += 1;
+        score.userScore += 1;
         return "You Win! scissor beats paper.";
     }
     else if (userChoice === computerChoice) {
         score.computerScore += 1;
-        score.playerScore += 1;
+        score.userScore += 1;
         return "It is a tie.";
     }
 }
 
 
 function game() {
-    while (score.playerScore < 5 && score.computerScore < 5) {
+    while (score.userScore < 5 && score.computerScore < 5) {
         let userChoice = getUserChoice();
         let computerChoice = getComputerChoice();
         console.log(playRound(userChoice,computerChoice));
     }
-    if (score.playerScore === 5) {
+    if (score.userScore === 5) {
         return "You won the Game!"
     }
     else if (score.computerScore === 5) {
         return "Computer won the Game!"
     }
-    else if (score.playerScore === 5 && score.computerScore === 5) {
+    else if (score.userScore === 5 && score.computerScore === 5) {
         return "This game is a Draw."
     }
 }
