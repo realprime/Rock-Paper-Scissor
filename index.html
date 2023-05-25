@@ -6,9 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <script src = './rockPaperScissor.js'></script>
-    
+    <div class = "heading-container">
+        <h1>ROCK PAPER SCISSOR</h1>
+    </div>
+    <div class = "main-container">
+        <div class = "score-container">
+            <h3>COMPUTER</h3>
+            <p class="score-num" id = "comp-score">0</p>
+        </div>
+        <div class = "main-section-container">
+            <div class="battle-container">
+                <div id="round-heading">
+                    <h3>ROUND</h3>
+                </div>
+                <div class="battle-ground">
+                    <img id="computer-choice" src="#" />
+                    <div class="divider"></div>
+                    <img id="user-choice" src="#"/>
+                </div>
+                <div class = "round-response">
+                    <p id="round-winner">Hello world</p>
+                    <p>&nbsp;</p>
+                    <p id="round-content">!!!!</p>
+                </div>
+            </div>
+            <div class = "button-area">
+                <div>
+                    <h3>Your Choice</h3>
+                </div>
+                <div class ="button-container">
+                    <div>
+                        <button class="choice" value="rock">
+                            <img src="./button-img/rock.png" />
+                            <p class="button-heading">ROCK</p>
+                        </button>
+                    </div>
+                    <!-- <div class="button-divider"></div> -->
+                    <hr>
+                    <div>
+                        <button class="choice" value="paper">
+                            <img src="./button-img/paper.png" />
+                            <p class="button-heading">PAPER</p>
+                        </button>
+                    </div>
+                    <!-- <div class="button-divider"></div> -->
+                    <hr>
+                    <div>
+                        <button class="choice" value="scissor">
+                            <img src="./button-img/scissor.png" />
+                            <p class="button-heading">SCISSOR</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "score-container">
+            <h3>HUMAAAN</h3>
+            <p class="score-num" id = "user-score">0</p>
+        </div>
+    </div>
 </body>
 </html>
