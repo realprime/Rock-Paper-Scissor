@@ -76,8 +76,8 @@ h3{
 }
 
 .battle-ground > img{
-    width: 164px;
-    height: 164px;
+    width: 200px;
+    height: 200px;
 }
 
 .divider{
@@ -169,4 +169,51 @@ hr{
     height: 70%;
     width: 1.5px;
     border: none;
+}
+
+.previous-heading{
+    color: #693636;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.previous-icon-container > img{
+    height: 45px;
+    width: 45px;
+}
+
+.sides{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.score-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.previous-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.user-icon-container, .computer-icon-container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.previous-icon{
+    height: 45px;
+    width: 45px;
+    opacity: 0.5;
+}
+
+.winner{
+    opacity: 1.0;
 }
