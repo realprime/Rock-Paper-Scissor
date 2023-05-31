@@ -6,31 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class = "heading-container">
-        <h1>ROCK PAPER SCISSOR</h1>
-    </div>
     <div class = "main-container">
-        <div class = "score-container">
-            <h3>COMPUTER</h3>
-            <p class="score-num" id = "comp-score">0</p>
+        <div class="comupterSide sides">
+            <div class = "score-container">
+                <h3>COMPUTER</h3>
+                <p class="score-num" id = "comp-score">0</p>
+            </div>
+            <div class="previous-container">
+                <p class="previous-heading">Previous Rounds</p>
+                <div class="computer-icon-container">
+                    <!-- <img class="previous-icon" src="./computer-side/rock.png"/> -->
+                </div>
+            </div>
         </div>
+        
         <div class = "main-section-container">
             <div class="battle-container">
                 <div id="round-heading">
-                    <h3>ROUND</h3>
+                    <h3>ROUND&nbsp;<span id="round-number">0</span></h3>
                 </div>
                 <div class="battle-ground">
-                    <img id="computer-choice" src="#" />
+                    <img id="computer-choice" src="./blank_bg.png" />
                     <div class="divider"></div>
-                    <img id="user-choice" src="#"/>
+                    <img id="user-choice" src="./blank_bg.png"/>
                 </div>
                 <div class = "round-response">
-                    <p id="round-winner">Hello world</p>
+                    <p id="round-winner">Let's begin !</p>
                     <p>&nbsp;</p>
-                    <p id="round-content">!!!!</p>
+                    <p id="round-content"></p>
                 </div>
             </div>
             <div class = "button-area">
@@ -63,9 +69,18 @@
                 </div>
             </div>
         </div>
-        <div class = "score-container">
-            <h3>HUMAAAN</h3>
-            <p class="score-num" id = "user-score">0</p>
+
+        <div class="userSide sides">
+            <div class = "score-container">
+                <h3>HUMAAAN</h3>
+                <p class="score-num" id = "user-score">0</p>
+            </div>
+            <div class="previous-container">
+                <p class="previous-heading">Previous Rounds</p>
+                <div class="user-icon-container">
+                    <!-- <img class="previous-icon winner" src="./user-side/paper.png"/> -->
+                </div>
+            </div>
         </div>
     </div>
 </body>
