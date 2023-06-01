@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
+    <link rel="shortcut icon" type="image/jpg" href="./favicon.png"/>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
+    <div class="start-up">
+        <div class="startUp-content">
+            <div class="startUp-heading">
+                <img src="./closed-fist.png" style="height: 164px; width: 164px;"/>
+                <h1>ROCK PAPER SCISSOR</h1>
+            </div>
+            <div class="points">
+                <h3>choose points</h3>
+                <div class="startUp-button-container">
+                    <button class="startUp-button" points=5 >5 pts</button>
+                    <button class="startUp-button" points=10 >10 pts</button>
+                    <button class="startUp-button" points=15 >15 pts</button>
+                </div>
+            </div>
+            <div>
+                <button class="disabled startUp-button startUp">START !</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
     <div class = "main-container">
         <div class="comupterSide sides">
             <div class = "score-container">
@@ -17,9 +40,7 @@
             </div>
             <div class="previous-container">
                 <p class="previous-heading">Previous Rounds</p>
-                <div class="computer-icon-container">
-                    <!-- <img class="previous-icon" src="./computer-side/rock.png"/> -->
-                </div>
+                <div class="computer-icon-container"></div>
             </div>
         </div>
         
@@ -29,13 +50,16 @@
                     <h3>ROUND&nbsp;<span id="round-number">0</span></h3>
                 </div>
                 <div class="battle-ground">
-                    <img id="computer-choice" src="./blank_bg.png" />
+                    <div class="img-container">
+                        <img id="computer-choice" src="./blank_bg.png" />
+                    </div>
                     <div class="divider"></div>
-                    <img id="user-choice" src="./blank_bg.png"/>
+                    <div class="img-container">
+                        <img id="user-choice" src="./blank_bg.png"/>
+                    </div>
                 </div>
                 <div class = "round-response">
                     <p id="round-winner">Let's begin !</p>
-                    <p>&nbsp;</p>
                     <p id="round-content"></p>
                 </div>
             </div>
@@ -50,7 +74,6 @@
                             <p class="button-heading">ROCK</p>
                         </button>
                     </div>
-                    <!-- <div class="button-divider"></div> -->
                     <hr>
                     <div>
                         <button class="choice" value="paper">
@@ -58,7 +81,6 @@
                             <p class="button-heading">PAPER</p>
                         </button>
                     </div>
-                    <!-- <div class="button-divider"></div> -->
                     <hr>
                     <div>
                         <button class="choice" value="scissor">
@@ -77,11 +99,47 @@
             </div>
             <div class="previous-container">
                 <p class="previous-heading">Previous Rounds</p>
-                <div class="user-icon-container">
-                    <!-- <img class="previous-icon winner" src="./user-side/paper.png"/> -->
-                </div>
+                <div class="user-icon-container"></div>
             </div>
         </div>
     </div>
+
+    <div class="end">
+        <div class="end-content">
+            <div class="end-heading-container">
+                <img src="./button-img/rock.png"/>
+                <img src="./button-img/paper.png"/>
+                <img src="./button-img/scissor.png"/>
+            </div>
+
+            <div class="scoreBoard">
+                <div class="end-score">
+                    <h3>COMPUTER</h3>
+                    <p id="computer-score-end" class="score-num">0</p>
+                </div>
+                <div class="colon">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="end-score">
+                    <p id="user-score-end" class="score-num">0</p>
+                    <h3>HUMAN&nbsp;<span id="subText">YOU</span></h3>
+                </div>
+            </div>
+
+            <div class="message">
+                <p class="main-message"></p>
+                <p class="secondary-message"></p>
+            </div>
+
+
+            <div class="reset-container">
+                <p id="reset-text">Do you want to play again ??</p>
+                <button class="startUp-button play-again" onclick="window.location.href = window.location.href">Play Again !</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="end-overlay"></div>
 </body>
 </html>
